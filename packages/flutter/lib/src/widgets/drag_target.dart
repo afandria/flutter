@@ -160,7 +160,6 @@ class _DraggableState<T> extends State<DraggableBase<T>> implements GestureArena
 
   void _startDrag(Point position, int pointer) {
     assert(_activePointers.containsKey(pointer));
-    _activePointers[pointer].resolve(GestureDisposition.accepted);
     Point dragStartPoint;
     switch (config.dragAnchor) {
       case DragAnchor.child:
